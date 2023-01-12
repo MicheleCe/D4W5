@@ -1,0 +1,122 @@
+main, .posts {
+    height: 100vh;
+    background-color: rgb(102, 102, 102);
+    display: flex;
+    justify-content: center;
+}
+
+.posts {
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    max-height: 900px;
+}
+
+article {
+    margin: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 250px;
+    width: 310px;
+    box-shadow: 2px 8px 6px rgba(40, 40, 40, 0.584);
+    transition: all 0.5s;
+
+}
+
+h2, h3 {
+    margin: 10px;
+}
+
+h2 {
+    font-family: Indie Flower;
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+h3 {
+    font-family: Indie Flower;
+    font-size: 1.4rem;
+}
+article:hover {
+    transition: all 0.5s;
+    transform: rotate(0deg) scale(1.3);
+    z-index: 1;
+    visibility:visible;
+    box-shadow: 5px 12px 6px rgba(40, 40, 40, 0.584);
+}
+
+.post1, .post5, .post7 {
+    background: linear-gradient(0deg, rgba(167,167,142,1) 0%, rgba(253,253,203,1) 19%, rgba(253,253,203,1) 100%);
+    animation: postsAnimation1 1.5s ease backwards;
+    transform: rotate(-3deg);
+}
+.post2, .post4, .post8 {
+    background: linear-gradient(0deg, rgba(182,191,183,1) 0%, rgba(202,250,203,1) 19%, rgba(202,250,203,1) 100%);
+    animation: postsAnimation2 1.5s ease backwards;
+    animation-delay: 1s;
+    transform: rotate(4deg);
+}
+.post3, .post6 {
+    background: linear-gradient(0deg, rgba(163,163,163,1) 0%, rgba(199,199,245,1) 19%, rgba(199,199,245,1) 100%);
+    animation: postsAnimation3 1.5s ease backwards;
+    animation-delay: 2s;
+    transform: rotate(-5deg);
+}
+
+
+@keyframes postsAnimation1 {
+    0% {transform: translate(-200vh) rotate(-3deg);
+        visibility: hidden;
+    }
+    
+    30% {
+        transform: translate(-200vh) rotate(9deg);
+    }
+    
+    70%{
+        transform: rotate(9deg)
+    }
+    100% {
+        transform: translate(0vh) rotate(-3deg);
+        visibility: visible;
+    }
+    
+}
+@keyframes postsAnimation2 {
+    0% {transform: translate(-180vh) rotate(4deg);
+        visibility: hidden;
+    }
+    
+    30% {
+        transform: translate(-180vh);
+    }
+    
+    70%{
+        transform: rotate(9deg)
+    }
+    100% {
+        transform: translate(0vh) rotate(4deg);
+        visibility: visible;
+    }
+    
+}
+@keyframes postsAnimation3 {
+    0% {transform: translate(-200vh) rotate(-5deg);
+        visibility: hidden;
+    }
+    
+    30% {
+        transform: translate(-200vh) rotate(9deg);
+    }
+    
+    70%{
+        transform: rotate(9deg)
+    }
+    100% {
+        transform: translate(0vh) rotate(-5deg);
+        visibility: visible;
+    }
+    
+}
